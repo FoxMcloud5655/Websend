@@ -14,8 +14,11 @@ import java.util.logging.Level;
 
 import org.bukkit.ChatColor;
 import org.bukkit.command.PluginCommand;
+import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.Plugin;
+import org.jetbrains.annotations.NotNull;
+
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
 import org.bukkit.Bukkit;
@@ -112,6 +115,38 @@ public class PacketParser {
                                 public void setAbsorptionAmount(double d) {
                                     throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
                                 }
+
+								@Override
+								public void sendExperienceChange(float arg0) {
+									// TODO Auto-generated method stub
+									
+								}
+
+								@Override
+								public void sendExperienceChange(float arg0, int arg1) {
+									// TODO Auto-generated method stub
+								}
+
+								@Override
+								public float getAttackCooldown() {
+									// TODO Auto-generated method stub
+									return 0;
+								}
+
+								@Override
+								public void attack(@NotNull Entity arg0) {
+									// TODO Auto-generated method stub
+								}
+
+								@Override
+								public void swingMainHand() {
+									// TODO Auto-generated method stub
+								}
+
+								@Override
+								public void swingOffHand() {
+									// TODO Auto-generated method stub
+								}
 
                             }, command);
                         }
